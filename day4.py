@@ -1,7 +1,7 @@
 with open('day4.data') as f:
     raw = f.readlines()
 clean = [x.replace('\n', '') for x in raw]
-print(len(raw))
+
 counter = 0
 
 for i in clean:
@@ -12,11 +12,12 @@ print('Day 4, part 1: {}'.format(len(clean) - counter))
 
 charset = []
 counter = 0
-for string in clean:
-    lst = list(string.split(' '))
+
+for line in clean:
+    lst = list(line.split(' '))
     charset.append(list(''.join(sorted(word)) for word in lst))
 
-for i, element in enumerate(charset):
+for element in charset:
     if len(element) == len(set(element)):
         counter += 1
 
