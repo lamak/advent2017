@@ -6,4 +6,17 @@ for x in dataset:
     if x == tmp:
         counter += x
     tmp = x
-print(counter)
+print('chapter one {}'.format(counter))
+
+counter = 0
+halfway = len(dataset) / 2
+
+for x, y in enumerate(dataset):
+    z = x + 1
+    if z + halfway <= len(dataset):
+        w = z + halfway
+    else:
+        w = z - halfway
+    if y == dataset[int(w-1)]:
+        counter += y
+print('chapter two {}'.format(counter))
