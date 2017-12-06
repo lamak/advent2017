@@ -10,7 +10,7 @@ while i < len(a):
     a[i] += 1
     i += tmp
     step += 1
-print('Day 5, part 1: {}', format(step))
+print('Day 5, part 1: {}'.format(step))
 
 step = 0
 i = 0
@@ -23,4 +23,4 @@ while i < len(b):
         b[i] -= 1
     i += tmp
     step += 1
-print('Day 5, part 2: {}', format(step))
+print('Day 5, part 2: {}'.format(step))
